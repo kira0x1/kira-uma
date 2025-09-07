@@ -3,7 +3,7 @@
 	line-height: 1.5;
 	font-weight: 400;
 
-	color: #222;
+	color: #383838;
 	background-color: #ffffff;
 
 	font-synthesis: none;
@@ -18,15 +18,15 @@ body {
 }
 
 #app {
-	display: flex;
-	flex-direction: column;
+	/* display: flex; */
+	/* flex-direction: column; */
 	min-height: 100vh;
 }
 
 header {
 	display: flex;
-	justify-content: flex-end;
-	background-color: #673ab8;
+	justify-content: flex-start;
+	background-color: #328f68;
 }
 
 header nav {
@@ -48,13 +48,14 @@ header a:hover {
 }
 
 main {
-	flex: auto;
-	display: flex;
-	align-items: center;
-	max-width: 1280px;
+	/* flex: auto; */
+	/* display: flex; */
+	/* align-items: center; */
+	/* max-width: 1280px; */
 	margin: 0 auto;
 	text-align: center;
 }
+
 
 @media (max-width: 639px) {
 	main {
@@ -62,9 +63,9 @@ main {
 	}
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
 	:root {
 		color: #ccc;
 		background-color: #1a1a1a;
 	}
-}
+} */
