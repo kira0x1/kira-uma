@@ -11,6 +11,7 @@ export function HorseStats() {
                     Goldship
                 </div>
             </div>
+
             <div class="stats-container">
                 <Stat title={"Speed"} value={22} />
                 <Stat title={"Stamina"} />
