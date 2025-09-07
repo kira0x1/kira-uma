@@ -5,6 +5,7 @@
 
 	color: #383838;
 	background-color: #ffffff;
+	color-scheme: light;
 
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
@@ -26,7 +27,7 @@ body {
 header {
 	display: flex;
 	justify-content: flex-start;
-	background-color: #328f68;
+	background-color: #79af72;
 }
 
 header nav {
