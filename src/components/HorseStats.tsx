@@ -5,7 +5,7 @@ export function HorseStats() {
         <div class="horse-stats">
             <div class="horse-bio">
                 <div class="horse-portrait">
-                    <img src="/src/assets/icons/chara/chr_icon_1001.png" />
+                    <img src="/src/assets/icons/chara/chr_icon_1006.png" />
                 </div>
                 <div class="horse-name">
                     Goldship
@@ -19,6 +19,17 @@ export function HorseStats() {
                 <Stat title={"Guts"} />
                 <Stat title={"Wit"} />
             </div>
+
+            <div class="skills-container">
+                <div class="skills-banner">
+                    Skills
+                </div>
+                <div class="skills-grid">
+                    <Skill skillName={"Straightaway Adept"} />
+                    <Skill skillName={"Stamina Eater"} />
+                    <Skill skillName={"Firm Conditions"} />
+                </div>
+            </div>
         </div>)
 }
 
@@ -29,5 +40,11 @@ function Stat(props) {
         </div>
         <input class="stat-value" type="number" min="1" max="1200" value={props.value ?? 0} />
         {/* <div class="stat-value">{props.value ?? 0}</div> */}
+    </div>
+}
+
+function Skill(props) {
+    return <div class="skill-container">
+        <span>{props.skillName}</span>
     </div>
 }
