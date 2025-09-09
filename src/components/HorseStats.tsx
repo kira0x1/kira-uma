@@ -1,4 +1,5 @@
 import "./HorseStats.css"
+import { SkillButton } from "./SkillButton/SkillButton"
 
 export function HorseStats() {
     return (
@@ -25,9 +26,9 @@ export function HorseStats() {
                     Skills
                 </div>
                 <div class="skills-grid">
-                    <Skill skillName={"Straightaway Adept"} />
-                    <Skill skillName={"Stamina Eater"} />
-                    <Skill skillName={"Firm Conditions"} />
+                    <SkillButton skillName={"Straightaway Adept"} />
+                    <SkillButton skillName={"Stamina Eater"} />
+                    <SkillButton skillName={"Firm Conditions"} />
                 </div>
             </div>
         </div>)
@@ -40,11 +41,5 @@ function Stat(props) {
         </div>
         <input class="stat-value" type="number" min="1" max="1200" value={props.value ?? 0} />
         {/* <div class="stat-value">{props.value ?? 0}</div> */}
-    </div>
-}
-
-function Skill(props) {
-    return <div class="skill-container">
-        <span>{props.skillName}</span>
     </div>
 }

@@ -33,8 +33,15 @@
 
 .stats-container {
   display: flex;
+
   border-radius: 6px;
-  border: 2px solid #79d823;
+  border-color: #a8e305;
+
+  border-left: 2px solid #a8e305;
+  border-right: 2px solid #a8e305;
+  border-bottom: 2px solid #a8e305;
+
+
   flex-shrink: 1;
   flex-grow: 1;
   max-width: 100%;
@@ -55,7 +62,8 @@
 }
 
 .stat-header {
-  background-color: #79d823;
+  /* background-color: #79d823; */
+  background: linear-gradient(#a8e305, #61ae16) padding-box, linear-gradient(#addb3c, #558f18) border-box;
   color: #fff;
   padding: 4px 0;
 }
@@ -92,12 +100,13 @@ input {
 
 .skills-banner {
   text-align: center;
-  background-color: #79d823;
+  /* background-color: #79d823; */
+  background: linear-gradient(#a8e305, #61ae16) padding-box, linear-gradient(#addb3c, #558f18) border-box;
   color: #fff;
   font-style: bold;
   font-weight: 600;
   font-size: 18px;
-  border-radius: 4px 4px 0 0;
+  border-radius: 8px 8px 0 0;
   width: 100%;
   height: fit-content;
   padding: 2px 0;
@@ -106,10 +115,10 @@ input {
 
 .skills-container {
   width: 100%;
-  border-radius: 8px;
+  border-radius: 10px;
   margin: 0;
   padding: 0;
-  border: 2px solid #79d823;
+  border: 2px solid #d6d6d6;
   display: flex;
   flex-grow: 1;
   flex-direction: column;
@@ -117,28 +126,12 @@ input {
 
 .skills-grid {
   padding: 2px 6px 6px 6px;
-  gap: 4px;
+  column-gap: 8px;
+  row-gap: 12px;
   display: grid;
   grid-template-columns: auto auto;
   grid-template-rows: auto auto;
   grid-auto-flow: column;
-}
-
-.skill-container {
-  background-color: #f3a66b;
-  height: 60px;
-  /* max-width: 160px; */
-  display: flex;
-  flex-grow: 1;
-  width: auto;
-  color: #fff;
-  justify-content: center;
-  align-items: center;
-  border-radius: 4px;
-  padding: 4px;
-  text-align: center;
-  font-size: 18px;
-  font-weight: 550;
 }
 
 /* @media (prefers-color-scheme: dark) {

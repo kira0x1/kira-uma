@@ -1,0 +1,51 @@
+.skill-button {
+    /* max-width: 160px; */
+    display: flex;
+    /* color: #fff; */
+    justify-content: center;
+    /* align-items: center; */
+    font-weight: 550;
+
+    align-items: center;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    box-shadow: 0 3px #b4b2c0;
+    box-sizing: border-box;
+    display: flex;
+    height: 3em;
+    overflow: hidden;
+    padding: 12px;
+    width: 18em;
+    height: 50px;
+
+}
+
+.white-skill {
+    background: linear-gradient(90deg, #fff3f7, #b5b2c6) padding-box, linear-gradient(90deg, #d6cfe7, #9496bd) border-box;
+}
+
+.white-skill:hover {
+    background: linear-gradient(90deg, #e9dde1, #88849b) padding-box, linear-gradient(90deg, #d2cddf, #adaec9) border-box;
+
+}
+
+.skill-icon {
+    height: 2.2em;
+    margin: 0 8px 0 0;
+    width: 2.2em
+}
+
+.skill-name {
+    color: #794016;
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+    /* text-stroke: 1px rgb(121, 64, 22); */
+    -webkit-text-stroke: 1px rgb(121, 64, 22);
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+    text-wrap: nowrap
+}
+
+.skill-button:hover {
+    background-color: #e7914f;
+}
