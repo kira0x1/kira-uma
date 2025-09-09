@@ -30,9 +30,9 @@
 }
 
 .skill-icon {
-    height: 2.2em;
-    margin: 0 8px 0 0;
-    width: 2.2em
+    height: 2.6em;
+    margin: 0 10px 0 0;
+    width: 2.6em
 }
 
 .skill-name {
@@ -41,8 +41,10 @@
     flex: 1;
     overflow: hidden;
     /* text-stroke: 1px rgb(121, 64, 22); */
-    -webkit-text-stroke: 1px rgb(121, 64, 22);
-    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+    font-size: 16px;
+    font-weight: 600;
+
+    /* text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white; */
     text-wrap: nowrap
 }
 
