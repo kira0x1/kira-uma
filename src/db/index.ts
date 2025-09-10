@@ -3,26 +3,50 @@ import { createClient } from '@supabase/supabase-js';
 // const db = new Database('uma.db')
 // db.pragma('journal_mode = WAL');
 
-export const supabase = createClient(import.meta.env.VITE_SUPABASE_URL, import.meta.env.VITE_SUPABASE_ANON_KEY);
+import dotenv from 'dotenv'
+dotenv.configDotenv({ path: ".env.local" })
+
+console.log(process.env.VITE_SUPABASE_URL)
+
+const config = {
+    url: import.meta.env?.VITE_SUPABASE_URL || process.env.VITE_SUPABASE_URL,
+    key: import.meta.env?.VITE_SUPABASE_ANON_KEY || process.env.VITE_SUPABASE_ANON_KEY
+}
+
+export const supabase = createClient(config.url, config.key);
 
 export interface SkillDB {
-    skillId: string,
+    skill_id: string,
     name: string,
-    baseCost: number,
-    groupId: number,
-    iconId: number,
-    skillOrder: number,
+    base_cost: number,
+    group_id: number,
+    icon_id: number,
+    skill_order: number,
     rarity: number
 }
 
 export interface SkillAltDB {
-    skillId: string,
-    baseDuration: number,
+    skill_id: string,
+    base_duration: number,
     condition: string,
     effects: string,
     precondition: string,
 }
 
+class DbController {
+    static initDB() { }
+    static AddAlternative(alt: SkillAltDB) {
+        return supabase.from("SkillAlternatives").insert({ ...alt });
+    }
+    static async AddSkill(skill: SkillDB) {
+        const { error } = await supabase.from("Skills").insert({ ...skill });
+        console.log("")
+        console.error(error)
+        console.log("")
+    }
+    static getSkillById(id: string) { }
+    static clearSkills() { }
+}
 
 // class DbController {
 //     static initDB() {
@@ -122,7 +146,7 @@ export interface SkillAltDB {
 
 //     static initSkillsTable() {
 //         db.exec(
-//             ` 
+//             `
 //             CREATE TABLE Skills (
 //                 skillId TEXT PRIMARY KEY NOT NULL,
 //                 name TEXT NOT NULL,
@@ -138,4 +162,4 @@ export interface SkillAltDB {
 //     }
 // }
 
-// export default DbController
+export default DbController
