@@ -10,6 +10,7 @@
     "testdb": "tsx src/scripts/testdb.ts"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.57.4",
     "better-sqlite3": "^12.2.0",
     "preact": "^10.26.9",
     "preact-iso": "^2.10.0"
