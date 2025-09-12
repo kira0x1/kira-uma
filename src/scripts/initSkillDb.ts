@@ -4,7 +4,7 @@ import skillDatas from '../data/skill_data.json';
 import skillNames from '../data/skillnames.json';
 import skillMetas from '../data/skill_meta.json';
 
-import DbController, { SkillAltDB, SkillDB } from '../db';
+import { DbController, SkillAltDB, SkillDB } from '../db';
 
 const skillNameKeys = Object.keys(skillNames);
 
@@ -76,6 +76,8 @@ export const STRINGS_en = Object.freeze({
     })
 });
 
+addSkillsToDb();
+
 function addSkillAltsToDb() {
     for (const k of skillNameKeys) {
         const data: SkillData = skillDatas[k];
@@ -84,11 +86,11 @@ function addSkillAltsToDb() {
 
         for (const alt of data.alternatives) {
             const dbAlt: SkillAltDB = {
-                baseDuration: alt.baseDuration,
+                base_duration: alt.baseDuration,
                 condition: alt.condition,
                 effects: JSON.stringify(alt.effects),
                 precondition: alt.precondition,
-                skillId: k
+                skill_id: k
             }
 
             console.log(dbAlt)
@@ -99,7 +101,7 @@ function addSkillAltsToDb() {
     }
 }
 
-function addSkillsToDb() {
+async function addSkillsToDb() {
     for (const k of skillNameKeys) {
         const meta: SkillMeta = skillMetas[k];
         const name: string[] = skillNames[k];
@@ -107,33 +109,31 @@ function addSkillsToDb() {
 
         if (!name || !meta || !data) continue;
 
-
         const sb: SkillDB = {
-            baseCost: meta.baseCost,
-            groupId: meta.groupId,
-            iconId: meta.iconId,
-            skillId: k,
+            base_cost: meta.baseCost,
+            group_id: meta.groupId,
+            icon_id: meta.iconId,
+            skill_id: k,
             name: name[1],
             rarity: data.rarity,
-            skillOrder: meta.order
+            skill_order: meta.order
         }
 
-        // console.log(sb)
-        DbController.AddSkill(sb);
+        console.log(sb)
+        await DbController.AddSkill(sb);
 
 
         for (const alt of data.alternatives) {
             const dbAlt: SkillAltDB = {
-                baseDuration: alt.baseDuration,
+                base_duration: alt.baseDuration,
                 condition: alt.condition,
                 effects: JSON.stringify(alt.effects),
                 precondition: alt.precondition,
-                skillId: k
+                skill_id: k
             }
 
             // console.log(dbAlt)
-            DbController.AddAlternative(dbAlt);
+            await DbController.AddAlternative(dbAlt);
         }
-
     }
 }

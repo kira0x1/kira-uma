@@ -1,0 +1,19 @@
+.skill-viewer {
+    display: flex;
+    flex-direction: column;
+    border: 3px solid #555;
+    width: 50vw;
+    margin: 20px auto;
+    padding: 10px;
+    gap: 10px;
+
+    .skill-display {
+        border: 2px solid green;
+        border-radius: 4px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        overflow: scroll;
+        flex-wrap: nowrap;
+    }
+}
