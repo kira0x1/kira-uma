@@ -4,7 +4,7 @@ import skillDatas from '../data/skill_data.json';
 import skillNames from '../data/skillnames.json';
 import skillMetas from '../data/skill_meta.json';
 
-import DbController, { SkillAltDB, SkillDB } from '../db';
+import { DbController, SkillAltDB, SkillDB } from '../db';
 
 const skillNameKeys = Object.keys(skillNames);
 

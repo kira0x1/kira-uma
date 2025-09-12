@@ -18,35 +18,35 @@
     width: 18em;
     height: 50px;
 
-}
 
-.white-skill {
-    background: linear-gradient(90deg, #fff3f7, #b5b2c6) padding-box, linear-gradient(90deg, #d6cfe7, #9496bd) border-box;
-}
+    .white-skill {
+        background: linear-gradient(90deg, #fff3f7, #b5b2c6) padding-box, linear-gradient(90deg, #d6cfe7, #9496bd) border-box;
+    }
 
-.white-skill:hover {
-    background: linear-gradient(90deg, #e9dde1, #88849b) padding-box, linear-gradient(90deg, #d2cddf, #adaec9) border-box;
-}
+    .white-skill:hover {
+        background: linear-gradient(90deg, #e9dde1, #88849b) padding-box, linear-gradient(90deg, #d2cddf, #adaec9) border-box;
+    }
 
-.skill-icon {
-    height: 2.6em;
-    margin: 0 10px 0 0;
-    width: 2.6em
-}
+    .skill-icon {
+        height: 2.6em;
+        margin: 0 10px 0 0;
+        width: 2.6em
+    }
 
-.skill-name {
-    color: #794016;
-    display: flex;
-    flex: 1;
-    overflow: hidden;
-    /* text-stroke: 1px rgb(121, 64, 22); */
-    font-size: 16px;
-    font-weight: 600;
+    .skill-name {
+        color: #794016;
+        display: flex;
+        flex: 1;
+        overflow: hidden;
+        /* text-stroke: 1px rgb(121, 64, 22); */
+        font-size: 16px;
+        font-weight: 600;
 
-    /* text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white; */
-    text-wrap: nowrap
-}
+        /* text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white; */
+        text-wrap: nowrap
+    }
 
-.skill-button:hover {
-    background-color: #e7914f;
+    .skill-button:hover {
+        background-color: #e7914f;
+    }
 }

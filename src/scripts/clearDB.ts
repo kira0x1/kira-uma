@@ -1,3 +1,3 @@
-import DbController from "../db";
+import { DbController } from "../db";
 
 DbController.clearSkills();

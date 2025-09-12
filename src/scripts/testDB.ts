@@ -1,7 +1,8 @@
-import db from '../db'
+import { client, DbController } from '../db'
 
 function getSkillFromDB() {
-    const res = db.getSkillById("101151")
+
+    const res = DbController.getSkillById("101151")
     console.log(res)
 }
 
