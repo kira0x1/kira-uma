@@ -1,11 +1,15 @@
 .skill-viewer {
     display: flex;
     flex-direction: column;
-    border: 3px solid #555;
-    width: 50vw;
+    border: 2px solid #cccccc;
+    width: max-content;
     margin: 20px auto;
-    padding: 10px;
+    padding: 30px 30px;
+    padding-bottom: 34px;
+    border-radius: 8px;
     gap: 10px;
+    overflow: scroll;
+    flex-wrap: wrap;
 
     .skill-display {
         border: 2px solid green;
@@ -15,5 +19,11 @@
         align-items: flex-start;
         overflow: scroll;
         flex-wrap: nowrap;
+    }
+
+    .skill-grid {
+        display: grid;
+        gap: 16px;
+        grid-template-columns: auto auto;
     }
 }

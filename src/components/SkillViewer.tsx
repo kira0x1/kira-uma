@@ -1,46 +1,26 @@
-import "./SkillViewer.css"
-import { useEffect, useState } from "preact/hooks";
-import LoadingSpinner from "./LoadingSpinner";
-import { DbController, SkillResponse } from "../db";
+import "./SkillViewer.css";
+import { SkillResponse } from "../db";
+import { SkillButton } from "./SkillButton/SkillButton";
 
-export function SkillViewer() {
-    const [skills, setSkills] = useState<SkillResponse[]>([])
-    const [isLoading, setLoading] = useState(false);
-
-    useEffect(() => {
-        getSkills()
-    }, [])
-
-    async function getSkills() {
-        setLoading(true);
-
-        const res = await DbController.getSkills(10);
-
-        if (res) {
-            setSkills(res)
-        }
-
-        setLoading(false)
+export function SkillViewer(props: { skills: Array<SkillResponse> }) {
+    function skillTextView(skill: SkillResponse) {
+        return (
+            <div class={"skill-display"}>
+                <div class={"display-id"}>
+                    {skill.skill_id}
+                </div>
+                <div class="skill-name">
+                    {skill.name}
+                </div>
+            </div>
+        )
     }
 
-    function SkillsDisplay() {
-        return <div class="skill-viewer">
-            {
-                skills.map(m => {
-                    return (
-                        <div class={"skill-display"}>
-                            <div class={"display-id"}>
-                                {m.skill_id}
-                            </div>
-                            <div class="skill-name">
-                                {m.name}
-                            </div>
-                        </div>
-                    )
-                })
-            }
+    return (
+        <div class="skill-viewer">
+            <div class="skill-grid">
+                {props.skills.map(m => <SkillButton skill={m} key={m.skill_id} />)}
+            </div>
         </div >
-    }
-
-    return isLoading ? <LoadingSpinner /> : <SkillsDisplay />
+    )
 }

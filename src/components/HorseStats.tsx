@@ -1,5 +1,4 @@
-import "./HorseStats.css"
-import { SkillButton } from "./SkillButton/SkillButton"
+import "./HorseStats.css";
 
 export function HorseStats() {
     return (
@@ -26,9 +25,9 @@ export function HorseStats() {
                     Skills
                 </div>
                 <div class="skills-grid">
-                    <SkillButton skillName={"Straightaway Adept"} />
-                    <SkillButton skillName={"Stamina Eater"} />
-                    <SkillButton skillName={"Firm Conditions"} />
+                    {/* <SkillButton skill={skills[0]} />
+                    <SkillButton skill={skills[1]} />
+                    <SkillButton skill={skills[2]} /> */}
                 </div>
             </div>
         </div>)
