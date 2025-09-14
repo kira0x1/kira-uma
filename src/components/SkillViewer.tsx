@@ -19,7 +19,7 @@ export function SkillViewer(props: { skills: Array<SkillResponse> }) {
     return (
         <div class="skill-viewer">
             <div class="skill-grid">
-                {props.skills.map(m => <SkillButton skill={m} key={m.skill_id} />)}
+                {props.skills.map((m, i) => <SkillButton skill={m} key={`${i}:${m.skill_id}`} />)}
             </div>
         </div >
     )

@@ -23,6 +23,18 @@ export class DbController {
         }
     }
 
+    //TODO: change rarity to enum
+    static async getSkillsByRarity(rarity: number, limit?: number): Promise<Array<SkillResponse>> {
+        const { data, error } = await client.from("Skills").select(`*, SkillAlternatives (skill_id, *)`).limit(limit).eq("rarity", rarity);
+
+        if (error) {
+            return;
+        } else {
+            return data;
+        }
+
+    }
+
     static getSkillById(id: string) { }
 
     static clearSkills() { }
