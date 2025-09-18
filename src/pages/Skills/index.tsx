@@ -19,7 +19,7 @@ export function Skills() {
         const rarityRes = await DbController.getSkillsByRarity(2, 10);
         const res3 = await DbController.getSkillsByRarity(4, 10);
 
-        const skills = [...res, ...rarityRes, ...res2, ...res3]
+        const skills = [...res, ...rarityRes, ...res2, ...res3];
 
         if (skills) {
             setSkills(skills);

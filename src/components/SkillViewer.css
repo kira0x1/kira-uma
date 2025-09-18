@@ -1,13 +1,13 @@
 .skill-viewer {
     display: flex;
     flex-direction: column;
-    border: 2px solid #cccccc;
+    /* border: 2px solid #cccccc; */
     width: max-content;
-    margin: 20px auto;
-    padding: 30px 30px;
-    padding-bottom: 34px;
-    border-radius: 8px;
-    gap: 10px;
+    /* margin: auto; */
+    /* padding: 30px 30px; */
+    /* padding-bottom: 34px; */
+    /* border-radius: 8px; */
+    /* gap: 10px; */
     overflow: scroll;
     flex-wrap: wrap;
 

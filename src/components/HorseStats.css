@@ -83,6 +83,24 @@
     appearance: none;
   }
 
+  .skill-controls {
+    gap: 4px;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 6px;
+    margin-right: 9px;
+    margin-left: 9px;
+
+    button {
+      padding: 0;
+      text-align: center;
+      border: 1 solid black;
+      border-radius: 0;
+      width: 20px;
+      height: 20px;
+    }
+  }
+
   .horse-portrait {
     display: flex;
     /* border: 2px solid rgb(83, 190, 139); */
