@@ -15,7 +15,7 @@
     height: 3em;
     overflow: hidden;
     padding: 12px;
-    width: 18em;
+    width: 19em;
     height: 50px;
 
     .skill-icon {
@@ -34,7 +34,8 @@
         font-weight: 600;
 
         /* text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white; */
-        text-wrap: nowrap
+        /* text-wrap: nowrap */
+        text-align: left;
     }
 
     .skill-button:hover {
