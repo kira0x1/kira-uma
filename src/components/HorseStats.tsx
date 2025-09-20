@@ -2,12 +2,14 @@ import { useState } from "preact/hooks";
 import "./HorseStats.css";
 import { SkillResponse } from "../db";
 import SkillSelectorModal from "./SkillSelectorModal";
+import { SkillButton } from "./SkillButton/SkillButton";
 
 export function HorseStats() {
    const [horseSkills, setHorseSkills] = useState<Array<SkillResponse>>([]);
    const [skillMenuOn, setSkillMenuOn] = useState(false);
 
    function addSkill(skill) {
+      console.log(`onAddSkill: `, skill);
       setHorseSkills([skill, ...horseSkills]);
    }
 
@@ -28,6 +30,7 @@ export function HorseStats() {
          <SkillSelectorModal
             isVisible={skillMenuOn}
             closeModal={() => setSkillMenuOn(false)}
+            onAddSkill={addSkill}
          />
 
          <div class="horse-stats">
@@ -52,9 +55,11 @@ export function HorseStats() {
                   <button onClick={showAddSkillMenu}>+</button>
                </div>
                <div class="skills-grid">
-                  {/* <SkillButton skill={skills[0]} />
-                    <SkillButton skill={skills[1]} />
-                    <SkillButton skill={skills[2]} /> */}
+                  {horseSkills.map((s) => {
+                     return (
+                        <SkillButton skill={s} onClick={() => removeSkill(s)} />
+                     );
+                  })}
                </div>
             </div>
          </div>

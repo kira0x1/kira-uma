@@ -12,13 +12,17 @@ export const classnames = Object.freeze([
    "skill-pink",
 ]);
 
-export function SkillButton(props: { skill: SkillResponse }) {
+export function SkillButton(props: { skill: SkillResponse; onClick }) {
    const { skill } = props;
    const cname = classnames[skill.rarity];
-   console.log(` ${skill.rarity}: ${cname}`);
 
    return (
-      <button class={`skill-button ${cname}`}>
+      <button
+         class={`skill-button ${cname}`}
+         onClick={() => {
+            props.onClick(skill);
+         }}
+      >
          <img class="skill-icon" src={Utils.getSkillIcon(skill.icon_id)} />
          <span class="skill-name">{skill.name}</span>
       </button>

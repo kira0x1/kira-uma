@@ -4,7 +4,11 @@ import LoadingSpinner from "./LoadingSpinner";
 import { SkillViewer } from "./SkillViewer";
 import "./SkillSelectorModal.css";
 
-export default function SkillSelectorModal(props) {
+export default function SkillSelectorModal(props: {
+   isVisible: boolean;
+   closeModal;
+   onAddSkill?;
+}) {
    const [skills, setSkills] = useState<SkillResponse[]>([]);
    const [isLoading, setLoading] = useState(false);
 
@@ -41,7 +45,7 @@ export default function SkillSelectorModal(props) {
                         <button onClick={() => props.closeModal()}>❌</button>
                      </div>
 
-                     <SkillViewer skills={skills} />
+                     <SkillViewer skills={skills} onClick={props.onAddSkill} />
                   </>
                )}
             </div>
