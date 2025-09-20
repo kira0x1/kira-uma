@@ -1,3 +1,3 @@
 export default function LoadingSpinner() {
-    return <div class="loading-spinner">Loading...</div>
+   return <div class="loading-spinner">Loading...</div>;
 }

@@ -1,28 +1,28 @@
 .skill-viewer {
-    display: flex;
-    flex-direction: column;
-    /* border: 2px solid #cccccc; */
-    width: max-content;
-    /* margin: auto; */
-    /* padding: 30px 30px; */
-    /* padding-bottom: 34px; */
-    /* border-radius: 8px; */
-    /* gap: 10px; */
-    flex-wrap: wrap;
+   display: flex;
+   flex-direction: column;
+   /* border: 2px solid #cccccc; */
+   width: max-content;
+   /* margin: auto; */
+   /* padding: 30px 30px; */
+   /* padding-bottom: 34px; */
+   /* border-radius: 8px; */
+   /* gap: 10px; */
+   flex-wrap: wrap;
 
-    .skill-display {
-        border: 2px solid green;
-        border-radius: 4px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        overflow: scroll;
-        flex-wrap: nowrap;
-    }
+   .skill-display {
+      border: 2px solid green;
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      overflow: scroll;
+      flex-wrap: nowrap;
+   }
 
-    .skill-grid {
-        display: grid;
-        gap: 16px;
-        grid-template-columns: auto auto;
-    }
+   .skill-grid {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: auto auto;
+   }
 }

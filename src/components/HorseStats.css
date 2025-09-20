@@ -1,157 +1,160 @@
 .horse-stats {
-  display: flex;
-  width: auto;
-  max-width: fit-content;
-  /* height: 50vh; */
-  border: 3px solid #dadada;
-  border-radius: 12px;
-  padding: 8px;
-  flex-direction: column;
-  gap: 10px;
+   display: flex;
+   width: auto;
+   max-width: fit-content;
+   /* height: 50vh; */
+   border: 3px solid #dadada;
+   border-radius: 12px;
+   padding: 8px;
+   flex-direction: column;
+   gap: 10px;
 
-  .horse-bio {
-    align-self: flex-start;
-    display: flex;
-    flex-direction: column;
-    /* border: 1px solid black; */
-    margin-bottom: 6px;
-  }
+   .horse-bio {
+      align-self: flex-start;
+      display: flex;
+      flex-direction: column;
+      /* border: 1px solid black; */
+      margin-bottom: 6px;
+   }
 
-  .horse-name {
-    font-size: 22px;
-  }
+   .horse-name {
+      font-size: 22px;
+   }
 
-  /* to stop borders from expanding past padding */
-  *,
-  *:before,
-  *:after {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-  }
+   /* to stop borders from expanding past padding */
+   *,
+   *:before,
+   *:after {
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+   }
 
-  .stats-container {
-    display: flex;
+   .stats-container {
+      display: flex;
 
-    border-radius: 6px;
-    border-color: #a8e305;
+      border-radius: 6px;
+      border-color: #a8e305;
 
-    border-left: 2px solid #a8e305;
-    border-right: 2px solid #a8e305;
-    border-bottom: 2px solid #a8e305;
+      border-left: 2px solid #a8e305;
+      border-right: 2px solid #a8e305;
+      border-bottom: 2px solid #a8e305;
 
+      flex-shrink: 1;
+      flex-grow: 1;
+      max-width: 100%;
+      width: auto;
+      flex-wrap: nowrap;
+      overflow: scroll;
+   }
 
-    flex-shrink: 1;
-    flex-grow: 1;
-    max-width: 100%;
-    width: auto;
-    flex-wrap: nowrap;
-    overflow: scroll;
-  }
+   .stat {
+      flex-grow: 1;
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin: 0;
+      font-size: 18px;
+      font-weight: 600;
+   }
 
-  .stat {
-    flex-grow: 1;
-    border-radius: 4px;
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-    margin: 0;
-    font-size: 18px;
-    font-weight: 600;
-  }
+   .stat-header {
+      /* background-color: #79d823; */
+      background:
+         linear-gradient(#a8e305, #61ae16) padding-box,
+         linear-gradient(#addb3c, #558f18) border-box;
+      color: #fff;
+      padding: 4px 0;
+   }
 
-  .stat-header {
-    /* background-color: #79d823; */
-    background: linear-gradient(#a8e305, #61ae16) padding-box, linear-gradient(#addb3c, #558f18) border-box;
-    color: #fff;
-    padding: 4px 0;
-  }
+   .stat-value {
+      padding: 10px 8px;
+      color: inherit;
+   }
 
-  .stat-value {
-    padding: 10px 8px;
-    color: inherit;
-  }
-
-  .stat-value,
-  input {
-    background: none;
-    border: none;
-    border-radius: 0;
-    outline: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-  }
-
-  .skill-controls {
-    gap: 4px;
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 6px;
-    margin-right: 9px;
-    margin-left: 9px;
-
-    button {
-      padding: 0;
-      text-align: center;
-      border: 1 solid black;
+   .stat-value,
+   input {
+      background: none;
+      border: none;
       border-radius: 0;
-      width: 20px;
-      height: 20px;
-    }
-  }
+      outline: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+   }
 
-  .horse-portrait {
-    display: flex;
-    /* border: 2px solid rgb(83, 190, 139); */
-    border-radius: 6px;
-    padding: 0 8px;
+   .skill-controls {
+      gap: 4px;
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 6px;
+      margin-right: 9px;
+      margin-left: 9px;
 
-    img {
-      object-fit: contain;
-      width: 120px;
+      button {
+         padding: 0;
+         text-align: center;
+         border: 1 solid black;
+         border-radius: 0;
+         width: 20px;
+         height: 20px;
+      }
+   }
+
+   .horse-portrait {
+      display: flex;
+      /* border: 2px solid rgb(83, 190, 139); */
+      border-radius: 6px;
+      padding: 0 8px;
+
+      img {
+         object-fit: contain;
+         width: 120px;
+         margin: 0;
+         padding: 0;
+      }
+   }
+
+   .skills-banner {
+      text-align: center;
+      /* background-color: #79d823; */
+      background:
+         linear-gradient(#a8e305, #61ae16) padding-box,
+         linear-gradient(#addb3c, #558f18) border-box;
+      color: #fff;
+      font-style: bold;
+      font-weight: 600;
+      font-size: 18px;
+      border-radius: 8px 8px 0 0;
+      width: 100%;
+      height: fit-content;
+      padding: 2px 0;
+      margin-bottom: 4px;
+   }
+
+   .skills-container {
+      width: 100%;
+      border-radius: 10px;
       margin: 0;
       padding: 0;
-    }
-  }
+      border: 2px solid #d6d6d6;
+      display: flex;
+      flex-grow: 1;
+      flex-direction: column;
+   }
 
-  .skills-banner {
-    text-align: center;
-    /* background-color: #79d823; */
-    background: linear-gradient(#a8e305, #61ae16) padding-box, linear-gradient(#addb3c, #558f18) border-box;
-    color: #fff;
-    font-style: bold;
-    font-weight: 600;
-    font-size: 18px;
-    border-radius: 8px 8px 0 0;
-    width: 100%;
-    height: fit-content;
-    padding: 2px 0;
-    margin-bottom: 4px;
-  }
+   .skills-grid {
+      padding: 2px 6px 6px 6px;
+      column-gap: 8px;
+      row-gap: 12px;
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-template-rows: auto auto;
+      grid-auto-flow: column;
+   }
 
-  .skills-container {
-    width: 100%;
-    border-radius: 10px;
-    margin: 0;
-    padding: 0;
-    border: 2px solid #d6d6d6;
-    display: flex;
-    flex-grow: 1;
-    flex-direction: column;
-  }
-
-  .skills-grid {
-    padding: 2px 6px 6px 6px;
-    column-gap: 8px;
-    row-gap: 12px;
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto;
-    grid-auto-flow: column;
-  }
-
-  /* @media (prefers-color-scheme: dark) {
+   /* @media (prefers-color-scheme: dark) {
   .skill-container {
     color: #eee;
     background-color: #e27c40;
