@@ -15,8 +15,9 @@
    height: 3em;
    overflow: hidden;
    padding: 12px;
-   width: 19em;
+   width: 18em;
    height: 50px;
+   /* font-size: 0.1px; */
 
    .skill-icon {
       height: 2.6em;
@@ -28,13 +29,14 @@
       color: #794016;
       display: flex;
       flex: 1;
-      overflow: hidden;
+      /* overflow: hidden; */
       /* text-stroke: 1px rgb(121, 64, 22); */
-      font-size: 16px;
+      /* font-size: 16px; */
+      font-size: 1.2em;
       font-weight: 600;
 
       /* text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white; */
-      /* text-wrap: nowrap */
+      /* text-wrap: nowrap; */
       text-align: left;
    }
 
@@ -69,20 +71,14 @@
 
 .skill-unique {
    background:
-      linear-gradient(
-            90deg,
-            rgb(239, 255, 214),
-            rgb(161, 201, 248),
-            rgb(170, 170, 255),
-            rgb(255, 186, 231)
-         )
-         padding-box,
-      linear-gradient(
-            90deg,
-            rgb(197, 255, 190),
-            rgb(189, 235, 255),
-            rgb(195, 208, 255),
-            rgb(255, 138, 222)
-         )
-         border-box;
+      linear-gradient(90deg,
+         rgb(239, 255, 214),
+         rgb(161, 201, 248),
+         rgb(170, 170, 255),
+         rgb(255, 186, 231)) padding-box,
+      linear-gradient(90deg,
+         rgb(197, 255, 190),
+         rgb(189, 235, 255),
+         rgb(195, 208, 255),
+         rgb(255, 138, 222)) border-box;
 }

@@ -1,0 +1,2 @@
+- [ ] skill filter
+- [ ] dont show skills that have already been added

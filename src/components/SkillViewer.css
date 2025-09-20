@@ -20,9 +20,10 @@
       flex-wrap: nowrap;
    }
 
+   /* add-skill modal grid */
    .skill-grid {
       display: grid;
-      gap: 16px;
+      gap: 12px 6px;
       grid-template-columns: auto auto;
    }
 }
