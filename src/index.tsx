@@ -5,6 +5,7 @@ import { Header } from "./components/Header.jsx";
 import { Home } from "./pages/Home/index.jsx";
 import { Simulator } from "./pages/Simulator/index.js";
 import { Skills } from "./pages/Skills/index.js";
+import { Profile } from "./pages/Profile/index.js";
 import { NotFound } from "./pages/_404.jsx";
 import "./style.css";
 
@@ -17,6 +18,7 @@ export function App() {
                <Route path="/" component={Home} />
                <Route path="/sim" component={Simulator} />
                <Route path="/skills" component={Skills} />
+               <Route path="/profile" component={Profile} />
                <Route default component={NotFound} />
             </Router>
          </main>

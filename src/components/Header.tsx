@@ -15,6 +15,9 @@ export function Header() {
             <a href="/skills" class={url == "/skills" && "active"}>
                Skills
             </a>
+            <a href="/profile" class={url == "/profile" && "active"}>
+               Profile
+            </a>
          </nav>
       </header>
    );

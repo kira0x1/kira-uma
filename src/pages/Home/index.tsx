@@ -16,6 +16,13 @@ export function Home() {
                href="/skills"
             />
          </section>
+         <section>
+            <Resource
+               title="Profile"
+               description="User's Profile"
+               href="/profile"
+            />
+         </section>
       </div>
    );
 }

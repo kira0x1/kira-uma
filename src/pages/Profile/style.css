@@ -1,0 +1,35 @@
+.profile-page {
+   display: flex;
+   justify-content: center;
+   padding: 20px;
+
+   .profile-card {
+      border: 3px solid #999;
+      width: 350px;
+      height: 400px;
+      padding: 8px;
+      border-radius: 4px;
+      gap: 10px;
+      display: flex;
+      flex-direction: column;
+
+      section {
+         border: 2px dashed #777;
+         padding: 4px;
+         border-radius: 2px;
+         display: flex;
+      }
+
+      .section-title {
+         font-size: 1.2em;
+         color: #444;
+      }
+
+      .profile-image {
+         border: 2px solid #ccc;
+         border-radius: 2px;
+         width: 5em;
+         height: 4em;
+      }
+   }
+}
