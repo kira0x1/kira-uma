@@ -71,14 +71,20 @@
 
 .skill-unique {
    background:
-      linear-gradient(90deg,
-         rgb(239, 255, 214),
-         rgb(161, 201, 248),
-         rgb(170, 170, 255),
-         rgb(255, 186, 231)) padding-box,
-      linear-gradient(90deg,
-         rgb(197, 255, 190),
-         rgb(189, 235, 255),
-         rgb(195, 208, 255),
-         rgb(255, 138, 222)) border-box;
+      linear-gradient(
+            90deg,
+            rgb(239, 255, 214),
+            rgb(161, 201, 248),
+            rgb(170, 170, 255),
+            rgb(255, 186, 231)
+         )
+         padding-box,
+      linear-gradient(
+            90deg,
+            rgb(197, 255, 190),
+            rgb(189, 235, 255),
+            rgb(195, 208, 255),
+            rgb(255, 138, 222)
+         )
+         border-box;
 }
