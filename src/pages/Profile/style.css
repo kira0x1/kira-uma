@@ -3,26 +3,62 @@
    justify-content: center;
    padding: 20px;
 
+   .uma-icon {
+      display: inline-block;
+      width: 0.8em;
+      height: 0.8em;
+      margin-right: 0.3em;
+
+      background-image: url("/src/assets/icons/teitetsu.BNI5mUfy.svg");
+
+      filter: invert(0.5) sepia(500) contrast(1.4) brightness(1) saturate(2.5)
+         hue-rotate(50deg);
+   }
+
    .profile-card {
-      border: 3px solid #999;
-      width: 350px;
+      border: 3px solid #ddd;
+
+      padding: 12px;
+      width: 420px;
       height: 400px;
-      padding: 8px;
       border-radius: 4px;
-      gap: 10px;
+      gap: 12px;
       display: flex;
       flex-direction: column;
 
+      .profile-cards {
+         display: flex;
+         justify-content: space-around;
+         gap: 1em;
+         width: 100%;
+
+         section {
+            flex-grow: 1;
+         }
+      }
+
       section {
-         border: 2px dashed #777;
-         padding: 4px;
+         /* border: 2px dashed #777; */
          border-radius: 2px;
          display: flex;
+         flex-direction: column;
+         align-items: flex-start;
+      }
+
+      .section-value {
+         color: #5e473a;
+         font-weight: 600;
+         font-size: 1em;
+         margin-left: 1em;
       }
 
       .section-title {
+         width: 100%;
+         font-weight: 600;
          font-size: 1.2em;
-         color: #444;
+         color: #70b719;
+         border-bottom: 3px solid #92d63f;
+         text-align: start;
       }
 
       .profile-image {
